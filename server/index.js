@@ -15,8 +15,6 @@ app.use(cors())
 
 app.use('/', router)
 
-// const connection_url = "mongodb+srv://johnrumide:DRgF9KDVccnZD0hJ@cluster0.7caoa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         app.listen(config.port, () => console.log(`Server running on port: ${config.port}`))
